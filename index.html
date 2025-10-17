@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrashHub - Smart Waste Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-box">TH</div>
+      <div>
+        <h1>TrashHub</h1>
+        <p>Smart waste management for clean cities</p>
+      </div>
+    </div>
+    <nav>
+      <button onclick="setView('home')">Home</button>
+      <button onclick="setView('resident')">Resident</button>
+      <button onclick="setView('collector')">Collector</button>
+      <button onclick="setView('admin')">Admin</button>
+      <a href="#" class="cta">Get Started</a>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer>
+    <p> <span id="year"></span> TrashHub — Built for cleaner cities </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
