@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrashHub - Smart Waste Management</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrashHub — Smart Waste Management</title>
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js (admin charts) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Google Maps JS (Places Autocomplete) -->
+  <!-- Your key (you provided earlier) is inserted below -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9jwFBj7KuSRKmZNTojf8_KqfU0R5M7MM&libraries=places" async defer></script>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <div class="logo-box">TH</div>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">TH</div>
       <div>
         <h1>TrashHub</h1>
-        <p>Smart waste management for clean cities</p>
+        <div class="tag">Smart waste management</div>
       </div>
     </div>
-    <nav>
-      <button onclick="setView('home')">Home</button>
-      <button onclick="setView('resident')">Resident</button>
-      <button onclick="setView('collector')">Collector</button>
-      <button onclick="setView('admin')">Admin</button>
-      <a href="#" class="cta">Get Started</a>
+
+    <nav class="nav">
+      <button id="nav-home" class="nav-btn"></button>
+      <button id="nav-about" class="nav-btn"></button>
+      <button id="nav-contact" class="nav-btn"></button>
+
+      <div id="auth-area" class="auth-area">
+        <button id="openAuthBtn" class="btn small">Login / Signup</button>
+      </div>
     </nav>
   </header>
 
-  <main id="app"></main>
+  <main id="app" class="container">
+    <!-- landing content injected by app.js -->
+  </main>
 
-  <footer>
-    <p> <span id="year"></span> TrashHub — Built for cleaner cities </p>
+  <footer class="site-footer">
+    <div>© <span id="year"></span> TrashHub — built for cleaner cities</div>
   </footer>
 
-  <script src="app.js"></script>
+  <!-- Auth Modal (popup) -->
+  <div id="authModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content auth-modal-content">
+      <div class="modal-header">
+        <h3 id="authTitle">Sign up</h3>
+        <button id="closeAuthBtn" class="btn small ghost">Close</button>
+      </div>
+
+      <div class="tabs" style="margin-bottom:12px">
+        <div id="tabSignup" class="tab active">Sign up</div>
+        <div id="tabLogin" class="tab">Login</div>
+      </div>
+
+      <div id="authBody" style="padding-bottom:12px">
+        <!-- signup/login form injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Map modal for picking precise coordinates -->
+  <div id="mapModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Pick a location</h3>
+        <button id="closeMapModal" class="btn small ghost">Close</button>
+      </div>
+      <div id="map" style="height:420px;border-radius:8px;"></div>
+      <div style="margin-top:8px; display:flex; gap:8px; justify-content:flex-end;">
+        <button id="confirmMap" class="btn">Confirm location</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
-
