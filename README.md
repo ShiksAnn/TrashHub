@@ -190,4 +190,5 @@ Map heat visualization for waste-heavy regions (via Google Maps API).
 ✅ Map integration for optimized route visualization.
 ✅ Lightweight frontend architecture (HTML, CSS, JS only).
 
-Deployment.
+Deployment Links
+https://trashhub.vercel.app/
