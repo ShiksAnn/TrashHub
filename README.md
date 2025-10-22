@@ -95,6 +95,8 @@ trashhub/
 
 ---
 
+---
+
 ## 🧭 Architecture & Flow
 
 ```mermaid
@@ -108,6 +110,7 @@ flowchart TD
     G --> H[Collector Marks Collected]
     H --> I[Admin Dashboard]
     I --> J[Analytics + Reports + Revenue]
+
 
 ⚙️ Setup Instructions
 1. Clone Repository
