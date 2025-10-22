@@ -83,7 +83,6 @@ TrashHub operates through **three integrated user flows**:
 ## 🗂️ Project Structure
 
 trashhub/
-│
 ├── index.html # Landing page with role-based login/signup
 ├── style.css # Responsive UI with soft eco-friendly green gradients
 ├── app.js # Core JS logic, Supabase SDK, IntaSend integration
