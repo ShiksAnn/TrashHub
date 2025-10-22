@@ -98,10 +98,8 @@ trashhub/
 ---
 
 ## 🧭 Architecture & Flow
-
-```mermaid
 flowchart TD
-    A[Resident Signup/Login] --> B[Supabase Auth]
+    A [Resident Signup/Login] --> B[Supabase Auth]
     B --> C[Resident Dashboard]
     C --> D[Request Pickup]
     D --> E[Database: pickups table]
